@@ -1,0 +1,142 @@
+Create a complete, modern, production-ready website called **Mechxer**, domain: **mechxer.com**, designed for **selling multiple software subscriptions**. Follow all of these requirements strictly:
+- use .jsx and .js instead of .tsx and .ts (very important!!!)
+---
+
+🖤 GENERAL WEBSITE DESIGN:
+- Dark theme UI (black/dark gray base with modern accent colors)
+- Smooth, modern UI/UX with soft transitions and animations
+- Fully responsive (mobile, tablet, desktop)
+- Modern typography and spacing
+- SEO-ready and optimized for performance
+- ⚡ Include skeleton loading placeholders for ALL pages and components (home page, product page, dashboard, admin panel, etc.)
+
+---
+
+🏠 HOME PAGE:
+- List layout (NOT grid) showing all available software subscriptions
+- Each software entry shows:
+  - Name
+  - Short description
+  - Pricing badge or label
+  - “Learn More” or “Subscribe” button
+- Clicking a software opens a full **product page**
+- Include skeleton loading when fetching software list
+
+---
+
+🧾 PRODUCT PAGE:
+- Software title
+- Product images/banner/gallery
+- Price range based on subscription type (e.g., monthly, yearly)
+- Supported platforms (Windows, Mac, Android, iOS, etc.)
+- Full product description (supports rich text: bold, links, lists, etc.)
+- ZIP password info (if product is compressed and password-protected)
+- Firebase config JSON (used on backend for subscription creation)
+- “Subscribe Now” button triggers checkout and subscription logic
+- Include skeleton loading for product details, images, and pricing while data loads
+
+---
+
+📄 CORE PAGES:
+- About Us
+- Contact Us
+- Privacy Policy
+- Terms & Conditions
+- DMCA
+- Sitemap
+- Blog (with blog list + blog post detail pages)
+- Each of these should include a skeleton loading placeholder when loading content
+
+---
+
+👤 USER SYSTEM:
+- User registration, login, email verification
+- User dashboard includes:
+  - Profile details
+  - Security settings (password change, 2FA optional)
+  - Purchase history
+  - Download links for purchased software
+  - Subscription info with plan type and expiry
+  - View ZIP password (if applicable)
+  - Software info per purchase
+- Skeleton loaders should be used for dashboard components while fetching user data
+
+---
+
+🛠️ ADMIN PANEL (`/admin` secured route):
+Must include:
+
+**Dashboard:**
+- Website analytics overview
+- Graphs/charts for:
+  - Total traffic
+  - Traffic by country
+  - Total purchases
+  - Total revenue
+  - Top-selling products
+- Include animated skeleton loaders for stats and charts while data loads
+
+**Products Management (CRUD):**
+- Add/edit/delete software
+- Upload product images
+- Enter title, description, platforms
+- Set subscription types with price per tier
+- Input download link
+- Input ZIP password (if any)
+- Upload Firebase config JSON (used during subscription creation)
+- Use skeleton loading while product list/data is being fetched or submitted
+
+**Email Templates (CRUD):**
+- Create/edit/delete email templates
+- Templates for: welcome emails, purchase receipts, subscription expiry, etc.
+- Support for placeholders (e.g., `{{username}}`, `{{productName}}`, `{{expiryDate}}`)
+- Skeleton UI for template loading and editing
+
+**Content Pages (CRUD):**
+- Manage pages like About, Privacy, DMCA, Terms, etc.
+- Include skeletons while loading each content page
+
+**Blog (CRUD):**
+- Create, edit, delete blog posts
+- Support for featured image, tags, categories
+- Skeleton UI while loading posts or editor
+
+**Users Management:**
+- View list of users
+- View user purchase and subscription logs
+- Edit/ban/delete users
+- All data tables and lists should have skeleton placeholders
+
+---
+
+🔒 BACKEND BEHAVIOR:
+- Backend should securely handle:
+  - Authentication & authorization
+  - Creating Firebase subscriptions using uploaded Firebase config
+  - Sending templated transactional emails (use created templates)
+  - Logging all activity (purchases, logins, etc.)
+- Data storage: use Firebase for subscription and auth, MongoDB/PostgreSQL for products & users
+- Payment: Stripe integration for secure checkout
+- Admin & user access should be role-based with permissions
+
+---
+
+🧠 BONUS FEATURES (Optional but appreciated):
+- Newsletter subscription
+- Live chat support integration
+- Dark/light mode toggle (still default to dark)
+- Performance optimization (lazy loading, image compression)
+- Webhooks for subscription renewal/reminders
+
+---
+
+💡 TECH STACK SUGGESTED:
+- use .jsx and .js instead of .tsx and .ts (very important!!!)
+- Auth: Firebase Auth
+- Admin UI: React Admin or custom panel
+- Payments: crypto and others
+- Hosting: Vercel + Firebase
+
+---
+
+Build this as a complete, production-level SaaS platform. Include all necessary routes, endpoints, database schemas, frontend and backend logic. Every part of the UI must have appropriate skeleton loading effects.
